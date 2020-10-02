@@ -1,5 +1,6 @@
 ﻿import React from "react";
 import { Text, StyleSheet, View, FlatList, Image } from "react-native";
+import { ScrollView } from "react-native-gesture-handler";
 
 const ListScreen = () => {
     const uni = [
@@ -17,7 +18,7 @@ const ListScreen = () => {
         { name: "EWU", key: '12' },
 ];
     return (
-        <View style={styles.viewStyle}>
+        <ScrollView style={styles.viewStyle}>
             <FlatList
                 horizontal={false}
                 showsVerticalScrollIndicator={true}
@@ -28,23 +29,23 @@ const ListScreen = () => {
                                      }
                 }
             />
-            <Image
-                source = {require("‪./../../assets/logo.png")}
-            />
-        </View>
+        </ScrollView>
+        
     );
 };
+console.log(require);
 
 const styles = StyleSheet.create(
     {
         textStyle: {
-            fontSize: 30,
-            color: "blue",
+            fontSize: 25,
+            color: "red",
             marginVertical:30,
         },
         viewStyle: {
             backgroundColor: "white",
-            borderColor : "green",
+            borderColor: "green",
+            borderWidth: 5,
         }
     }
 );
