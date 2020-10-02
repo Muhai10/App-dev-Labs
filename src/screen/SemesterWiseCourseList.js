@@ -1,54 +1,47 @@
 ﻿import React from "react";
-import { Text, StyleSheet, Button, View, Image, TouchableOpacity } from "react-native";
+import { Text, StyleSheet, View, TouchableOpacity } from "react-native";
 
-const HomeScreen = (props) => {
+const SemesterWiseCourseList = (props) => {
     return (
         <View>
-            <Text style={styles.textStyle}> </Text>
-            <Text style={styles.textStyle}>Home</Text>
-            <Text> </Text>
-            <Image style={styles.imageStyle} source={require("‪./../../assets/logo.png")}></Image>
-            <Text> </Text>
-            <Text style={styles.textStyle}>Department of CSE</Text>
-            <Text> </Text>
-            <Text style={styles.textStyle2}>Programme : SWE</Text>
-            <Text> </Text>
+            <Text style={styles.textStyle}>Semesters</Text>
             <TouchableOpacity
                 onPress={
                     function () {
-                        props.navigation.navigate("Profile");
+                        props.navigation.navigate("CourseList of First Semester");
                     }
                 }
                 style={styles.ButtonContainer}
             >
-                <Text style={styles.buttonText}>My Profile</Text>
+                <Text style={styles.buttonText}>1st Semester</Text>
             </TouchableOpacity>
             <Text> </Text>
             <TouchableOpacity
                 onPress={
                     function () {
-                        props.navigation.navigate("Semesters");
+                        props.navigation.navigate("CourseList of Second Semester");
                     }
                 }
                 style={styles.ButtonContainer}
             >
-                <Text style={styles.buttonText}>Semester Wise Course List</Text>
+                <Text style={styles.buttonText}>2nd Semester</Text>
             </TouchableOpacity>
             <Text> </Text>
             <TouchableOpacity
                 onPress={
                     function () {
-                        props.navigation.navigate("Faculty List");
+                        props.navigation.navigate("CourseList of Third Semester");
                     }
                 }
                 style={styles.ButtonContainer}
             >
-                <Text style={styles.buttonText}>List of The Faculties</Text>
+                <Text style={styles.buttonText}>3rd Semester</Text>
             </TouchableOpacity>
             <Text> </Text>
         </View>
     );
 };
+console.log(require);
 
 const styles = StyleSheet.create(
     {
@@ -58,19 +51,10 @@ const styles = StyleSheet.create(
             color: 'blue',
             backgroundColor: 'white',
         },
-        textStyle2: {
-            textAlign: "center",
-            fontSize: 25,
-            color: 'blue',
-            backgroundColor: 'white',
-        },
-        imageStyle: {
-            alignSelf: "center",
-            width: 124,
-            height: 203,
-            borderColor: 'gainsboro',
-            borderWidth: 2,
-            backgroundColor: 'white'
+        viewStyle: {
+            backgroundColor: "white",
+            borderColor: "green",
+            borderWidth: 5,
         },
         buttonText: {
             fontSize: 18,
@@ -89,4 +73,4 @@ const styles = StyleSheet.create(
     }
 );
 
-export default HomeScreen; 
+export default SemesterWiseCourseList;
